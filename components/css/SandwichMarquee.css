@@ -1,0 +1,86 @@
+.sandwich-section {
+  position: relative;
+  width: 100%;
+   font-family: 'Raleway', sans-serif;
+  height: 500px;
+  background-color: #7b61ff; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Base marquee container */
+.marquee-container {
+  position: absolute;
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  pointer-events: none;
+}
+
+/* --- BACK TEXT (Piche wala text) --- */
+.back-text {
+  z-index: 1;
+  /* Isko halka sa upar shift kiya depth ke liye */
+  transform: translateY(-20px); 
+}
+
+.back-text h1 {
+  font-size: clamp(80px, 15vw, 180px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2); /* Thoda aur light kiya taake depth dikhe */
+  margin-right: 60px; /* Horizontal gap badha diya */
+  letter-spacing: 2px;
+}
+
+/* --- FRONT TEXT (Upar wala outline text) --- */
+.front-text {
+  z-index: 20; 
+  /* Isko halka sa neeche shift kiya taake piche wala text nazar aaye */
+  transform: translateY(20px); 
+}
+
+.front-text h1 {
+  font-size: clamp(80px, 15vw, 180px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  margin-right: 60px; /* Same horizontal gap */
+  letter-spacing: 2px;
+}
+
+/* --- MIDDLE IMAGE --- */
+.center-subject {
+  position: relative;
+  z-index: 10; 
+  width: 100%;
+  max-width: 500px; /* Thoda size adjust kiya taake text block na ho */
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.center-subject img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5));
+  /* Image ko thoda lift dene ke liye */
+  transform: scale(1.1);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .sandwich-section { height: 400px; }
+  
+  /* Mobile par gap thoda kam kar diya */
+  .back-text { transform: translateY(-10px); }
+  .front-text { transform: translateY(10px); }
+  
+  .front-text h1 { -webkit-text-stroke: 1px white; margin-right: 30px; }
+  .back-text h1 { margin-right: 30px; }
+  
+  .center-subject { max-width: 300px; }
+}

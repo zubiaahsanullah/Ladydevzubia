@@ -1,0 +1,141 @@
+/* --- Global Grid Style --- */
+.clients-grid-section {
+  width: 100%;
+  padding: 100px 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  font-family: 'Lexend', sans-serif; /* Base font */
+}
+
+.clients-grid-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.clients-grid-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.grid-badge {
+  display: inline-block;
+  color: #7b61ff;
+  background: rgba(123, 97, 255, 0.08);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(123, 97, 255, 0.15);
+}
+
+.grid-title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 900;
+  color: #0f172a;
+  letter-spacing: -2px;
+  margin-bottom: 10px;
+  font-family: 'Raleway', sans-serif; /* Heading font */
+}
+
+.grid-title span { color: #7b61ff; }
+
+.grid-desc {
+  color: #64748b;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- GRID WITH LINES LOGIC --- */
+.tech-grid-wrapper {
+  display: grid;
+  /* Desktop par 5 Columns kiye hain */
+  grid-template-columns: repeat(5, 1fr); 
+  border-top: 1px solid rgba(123, 97, 255, 0.12);
+  border-left: 1px solid rgba(123, 97, 255, 0.12);
+  margin-top: 40px;
+}
+
+.tech-grid-item {
+  padding: 40px 20px; /* Thoda padding kam kiya taaki 5 fit ho jayein */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgba(123, 97, 255, 0.12);
+  border-bottom: 1px solid rgba(123, 97, 255, 0.12);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s ease;
+}
+
+.tech-logo-box img {
+  height: 42px; /* Logo size thoda adjust kiya */
+  width: auto;
+  /* Grayscale hataya gaya */
+  filter: none; 
+  opacity: 0.85; /* Slightly muted for cleaner look */
+  transition: 0.3s ease;
+}
+
+.tech-logo-box span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Hover Effect */
+.tech-grid-item:hover {
+  background: rgba(123, 97, 255, 0.03);
+}
+
+.tech-grid-item:hover .tech-logo-box img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.tech-grid-item:hover .tech-logo-box span {
+  color: #7b61ff;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1200px) {
+  .tech-grid-wrapper { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .tech-grid-wrapper { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .clients-grid-header { text-align: left; margin-left: 30px; }
+  .grid-desc { margin: 0; }
+  
+  .tech-grid-wrapper { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  
+  .tech-grid-item { padding: 30px 15px; }
+  .tech-logo-box img { height: 35px; }
+  .tech-logo-box span { font-size: 11px; }
+}
+
+@media (max-width: 480px) {
+    .clients-grid-section { padding: 60px 0; }
+    /* Mobile par line borders hatane ke liye (Bahar wala look) */
+    .tech-grid-wrapper { border-left: none; border-right: none; }
+}

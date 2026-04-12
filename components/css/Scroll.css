@@ -1,0 +1,94 @@
+/* Scroll.css */
+
+:root {
+  --brand-magenta: #7b61ff; 
+  --flame-color: #ff9d00;
+}
+
+/* Hide default scrollbar thumb but keep track if you want a minimal look */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(123, 97, 255, 0.03);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7b61ff 0%, #4f46e5 100%);
+  border-radius: 10px;
+  background-clip: content-box;
+}
+
+#rocket-scroll-container {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 35px;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+#rocket-main-unit {
+  position: absolute;
+  right: 4px;
+  top: 0;
+  color: var(--brand-magenta);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: drop-shadow(0px 0px 8px rgba(123, 97, 255, 0.3));
+  will-change: top, transform;
+}
+
+/* SVG Icon rotation logic */
+.rocket-svg {
+  display: block;
+  transition: transform 0.4s ease;
+  fill: var(--brand-magenta);
+}
+
+#rocket-main-unit.moving-down .rocket-svg { 
+  transform: rotate(180deg); 
+}
+
+#rocket-main-unit.moving-up .rocket-svg { 
+  transform: rotate(0deg); 
+}
+
+/* Flame Styling */
+.exhaust-flame {
+  width: 6px;
+  height: 18px;
+  background: linear-gradient(to bottom, var(--flame-color), transparent);
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.2s;
+}
+
+/* Downward movement - Flame at TOP */
+.moving-down .top-flame {
+  opacity: 1;
+  top: -12px;
+  animation: flicker 0.1s infinite alternate;
+}
+
+/* Upward movement - Flame at BOTTOM */
+.moving-up .bottom-flame {
+  opacity: 1;
+  bottom: -12px;
+  animation: flicker 0.1s infinite alternate;
+}
+
+@keyframes flicker {
+  from { transform: scaleX(1) scaleY(1); opacity: 0.7; }
+  to { transform: scaleX(1.3) scaleY(1.7); opacity: 1; }
+}
+
+@media (max-width: 991px) {
+  #rocket-scroll-container { display: none; }
+}

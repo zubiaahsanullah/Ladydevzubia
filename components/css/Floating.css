@@ -1,0 +1,123 @@
+/* Floating.css */
+
+.premiumFabWrapper {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Lexend', sans-serif;
+}
+
+.menuStack {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.socialOrbit {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glassIcon {
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(123, 97, 255, 0.2);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7b61ff;
+  font-size: 24px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 32px 0 rgba(123, 97, 255, 0.1);
+}
+
+.socialOrbit:hover .glassIcon {
+  background: var(--brand-color);
+  color: white;
+  transform: translateY(-5px) rotate(8deg);
+  box-shadow: 0 15px 30px -5px var(--brand-color);
+  border-color: transparent;
+}
+
+.premiumTooltip {
+  position: absolute;
+  right: 75px;
+  background: #0f172a;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.socialOrbit:hover .premiumTooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Master Button Styling */
+.masterBtn {
+  width: 65px;
+  height: 65px;
+  border-radius: 22px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(135deg, #7b61ff 0%, #4f46e5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(123, 97, 255, 0.3);
+  overflow: visible;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.masterBtnActive {
+  background: #0f172a !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.supportSymbol {
+  color: white;
+  font-size: 30px; /* Size for headphones/close icon */
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pulse Animation */
+.pulseLayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+  background: #7b61ff;
+  z-index: -1;
+  animation: fabPulse 2.5s infinite;
+}
+
+@keyframes fabPulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.iconContainer { z-index: 2; display: flex; align-items: center; justify-content: center; }

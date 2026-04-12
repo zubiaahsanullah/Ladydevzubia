@@ -1,0 +1,185 @@
+/* --- Global Styles --- */
+.services-section {
+  padding: 100px 20px;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sub-title {
+  display: inline-block;
+  font-family: 'Lexend', sans-serif;
+  color: #7b61ff;
+  background: rgba(123, 97, 255, 0.08);
+  padding: 8px 24px;
+  border-radius: 100px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(123, 97, 255, 0.1);
+}
+
+.main-title {
+  font-size: 65px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.main-title span {
+  color: #7b61ff;
+  position: relative;
+}
+
+/* --- MODERN BENTO GRID (4 Columns for Desktop) --- */
+.services-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  /* Desktop par 4 columns fix kar diye hain */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 25px;
+}
+
+.service-card {
+  background: #fdfdfd;
+  padding: 40px 30px;
+  border-radius: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  background: #ffffff;
+  border-color: rgba(123, 97, 255, 0.2);
+  box-shadow: 0 30px 60px rgba(123, 97, 255, 0.08);
+}
+
+.service-image-container {
+  width: 100%;
+  max-width: 180px;
+  height: 180px;
+  margin-bottom: 25px;
+  position: relative;
+  background: rgba(123, 97, 255, 0.05);
+  border-radius: 24px;
+  padding: 15px;
+  
+  /* Desktop Centering */
+  margin-left: auto;
+  margin-right: auto;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.service-card p {
+  color: #64748b;
+  font-size: 15px;
+  font-family: 'Lexend', sans-serif;
+  line-height: 1.7;
+  margin-bottom: auto;
+}
+
+.service-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+  transition: 0.3s;
+  color: #0f172a;
+}
+
+.service-card:hover .service-arrow {
+  background: #7b61ff;
+  color: white;
+  transform: rotate(-45deg);
+}
+
+/* ======================================================
+   RESPONSIVE (TABLET & MOBILE)
+   ====================================================== */
+
+/* Tablet View (2 Columns) */
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile View (1 Column + Left Aligned Content) */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 20px;
+  }
+.main-title {
+  font-size: 20px;
+}
+  .services-header {
+    text-align: left; /* Header left aligned */
+    margin-bottom: 40px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column stack */
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 30px;
+    align-items: flex-start; /* Items left aligned */
+    text-align: left; /* Text left aligned */
+  }
+
+  .service-image-container {
+    margin-left: 0; /* Image container pushed to left */
+    margin-right: 0;
+    max-width: 150px;
+    height: 150px;
+  }
+
+  .main-title {
+    font-size: 32px;
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+
+  .service-arrow {
+    margin-left: 0; /* Arrow to the left */
+  }
+}
