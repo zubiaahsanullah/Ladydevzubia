@@ -85,7 +85,13 @@ const Hero = () => {
           </div>
 
           <div className="hero-btn-group">
-            <button className="btn-primary" aria-label="Get a Free SEO Audit">Get a Free Audit</button>
+          <button
+  className="btn-primary"
+  aria-label="Chat on WhatsApp"
+  onClick={() => window.open("https://wa.me/923372413300", "_blank")}
+>
+  WhatsApp Us
+</button>
             <button className="btn-outline" aria-label="View Case Studies">View Our Case Studies</button>
           </div>
         </div>
