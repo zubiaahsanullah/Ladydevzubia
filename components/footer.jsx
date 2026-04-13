@@ -62,10 +62,9 @@ export default function UpdatedFooter() {
             {/* Social Links */}
             <div className="link-group">
               <h3>CONNECT</h3>
-              <Link href="https://github.com"><FiGithub /> GitHub</Link>
               <Link href="https://linkedin.com"><FiLinkedin /> LinkedIn</Link>
               <Link href="https://instagram.com"><FiInstagram /> Instagram</Link>
-              <Link href="https://twitter.com"><FiTwitter /> Twitter</Link>
+          
             </div>
 
             {/* ALL 8 SERVICES */}
@@ -83,9 +82,12 @@ export default function UpdatedFooter() {
             {/* CONTACT INFO */}
             <div className="link-group contact-stack">
               <h3>CONTACT</h3>
-              <div className="contact-item">
-                <FiPhone /> <span>+92 337 2413300</span>
-              </div>
+            <div className="contact-item">
+  <FiPhone /> 
+  <a href="https://api.whatsapp.com/send?phone=923372413300" target="_blank" rel="noopener noreferrer">
+    +92 337 2413300
+  </a>
+</div>
               <div className="contact-item">
                 <FiMapPin /> <span>Karachi, Pakistan</span>
               </div>
@@ -166,7 +168,27 @@ export default function UpdatedFooter() {
           margin-bottom: 20px;
         }
         .footer-title span { color: #7b61ff; }
+.email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top:30px;
+  color: #7b61ff;
+  background: rgba(123, 97, 255, 0.08);
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid rgba(123, 97, 255, 0.2);
+  transition: all 0.3s ease;
+}
 
+.email-link:hover {
+  background: #7b61ff;
+  color: #fff;
+  transform: translateY(-2px);
+}
         .footer-right {
           flex: 1.5;
           display: flex;
