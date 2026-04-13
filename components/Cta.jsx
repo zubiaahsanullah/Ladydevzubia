@@ -32,9 +32,12 @@ const CTA = () => {
           </p>
 
           <div className="cta-btn-group">
-            <button className="cta-btn-main">
-              Get Started Now <FiArrowUpRight />
-            </button>
+                <button
+  className="cta-btn-main"
+  onClick={() => window.open("https://api.whatsapp.com/send?phone=923372413300", "_blank")}
+>
+  Get Started Now <FiArrowUpRight />
+</button>
           </div>
         </div>
 
