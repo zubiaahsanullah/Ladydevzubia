@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = "https://ladydevzubia.com"; // Apni asli domain yahan likhein
+  const baseUrl = "https://ladydevzubia.vercel.app/"; // Apni asli domain yahan likhein
 
   return [
     {
