@@ -51,8 +51,8 @@ export default function UpdatedFooter() {
             
             <p className="footer-subline">Next-Generation Digital Strategy & Development for Global Brands.</p>
             
-            <Link href="mailto:info@ladydevzubia.com" className="email-link">
-              info@ladydevzubia.com <FiArrowUpRight />
+            <Link href="mailto:ladydevzubia@gmail.com" className="email-link">
+              ladydevzubia@gmail.com <FiArrowUpRight />
             </Link>
           </div>
 
@@ -62,8 +62,8 @@ export default function UpdatedFooter() {
             {/* Social Links */}
             <div className="link-group">
               <h3>CONNECT</h3>
-              <Link href="https://linkedin.com"><FiLinkedin /> LinkedIn</Link>
-              <Link href="https://instagram.com"><FiInstagram /> Instagram</Link>
+              <Link href="https://www.linkedin.com/in/ladydev-zubia-590468403"><FiLinkedin /> LinkedIn</Link>
+              <Link href="https://www.instagram.com/lady_dev_zubia?igsh=OXkzdGtmOWViYzd0"><FiInstagram /> Instagram</Link>
           
             </div>
 
