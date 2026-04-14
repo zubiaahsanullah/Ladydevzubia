@@ -8,9 +8,9 @@ const FloatingContact = () => {
 
   const socialLinks = [
     { id: 1, icon: "ri-whatsapp-fill", color: '#25D366', label: 'WhatsApp', href: 'https://wa.me/923372413300' },
-    { id: 2, icon: "ri-instagram-line", color: '#FF007A', label: 'Instagram', href: '#' },
-    { id: 3, icon: "ri-linkedin-fill", color: '#0077B5', label: 'LinkedIn', href: '#' },
-    { id: 4, icon: "ri-mail-send-fill", color: '#7b61ff', label: 'Email', href: 'mailto:nabeehaahsan22@gmail.com' },
+    { id: 2, icon: "ri-instagram-line", color: '#FF007A', label: 'Instagram', href: 'https://www.instagram.com/lady_dev_zubia?igsh=OXkzdGtmOWViYzd0' },
+    { id: 3, icon: "ri-linkedin-fill", color: '#0077B5', label: 'LinkedIn', href: 'https://www.linkedin.com/in/ladydev-zubia-590468403' },
+    { id: 4, icon: "ri-mail-send-fill", color: '#7b61ff', label: 'Email', href: 'mailto:ladydevzubia@gmail.com' },
   ];
 
   return (
