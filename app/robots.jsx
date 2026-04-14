@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: '/private/', // Agar koi folder hide karna ho
     },
-    sitemap: 'https://ladydevzubia.com/sitemap.xml', // Apni domain ke saath sitemap ka link
+    sitemap: 'https://ladydevzubia.vercel.app/sitemap.xml', // Apni domain ke saath sitemap ka link
   }
 }
